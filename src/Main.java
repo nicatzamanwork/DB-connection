@@ -1,8 +1,4 @@
 package org.example;
-
-import org.example.DAO.Ticket;
-import org.example.DAO.UserTable;
-
 public class Main {
     public static void main(String[] args) {
         UserTable userDao = new UserTable();
