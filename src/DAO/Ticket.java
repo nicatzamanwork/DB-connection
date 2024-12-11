@@ -9,7 +9,7 @@ public class Ticket {
     public void saveTicket(int id, int userId, String ticketType, String creationDate) throws SQLException {
         String sql = "INSERT INTO public.ticket (id, user_id, ticket_type, creation_date) " +
                 "VALUES (?, ?, ?::ticket_type, ?)";
-        try (Connection connection = DatabaseConnection.getConnection();
+        try  (Connection connection = DatabaseConnection.getConnection();
              PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, id);
             statement.setInt(2, userId);

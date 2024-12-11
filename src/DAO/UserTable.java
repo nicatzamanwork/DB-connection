@@ -8,7 +8,7 @@ import java.sql.SQLException;
 public class UserTable {
     public void saveUser(int id, String username, String creationDate) throws SQLException {
         String sql = "INSERT INTO public.user_table (id, name, creation_date) VALUES (?, ?, ?)";
-        try (Connection connection = DatabaseConnection.getConnection();
+        try  (Connection connection = DatabaseConnection.getConnection();
              PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, id);
             statement.setString(2, username);
